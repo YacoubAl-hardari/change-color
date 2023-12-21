@@ -1,0 +1,99 @@
+:root{
+    --main-color:#8e44ad;
+}
+
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New',tahmoa;
+}
+
+body{
+    height: 2500px;
+    background-color: var(--main-color);
+
+}
+.container{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom:80px;
+}
+
+.container h1{
+    color: var(--main-color);
+    background-color: #fff;
+    box-shadow: 0 10px 15px rgba(0,0,0,.3);
+    border-radius: 10px;
+    padding: .5em .8em;
+    font-size: 6em;
+}
+.color_switcher{
+    position: fixed;
+    top: 25px;
+    right:-200px;
+    width: 200px;
+    padding: 10px;
+    background: #fff;
+    z-index: 1000;
+    transition: all 0.5s linear;
+border-radius: 10px;
+
+}
+.color_switcher.active{
+    right:0px;
+
+}
+
+.color_switcher h3{
+    color: var(--main-color);
+    font-size: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #3333;
+    padding: 5px 0;
+    text-align: center;
+border-radius: 10px;
+
+}
+
+.color_switcher  .switcher_btn{
+position: absolute;
+top: 0;
+left: -75px;
+color: var(--main-color);
+background-color: #fff;
+padding: 10px 20px ;
+cursor: pointer;
+border-radius: 10px;
+font-size: 39px;
+}
+
+.color_switcher  .switcher_btn i{
+    animation: spinner 2s linear infinite;
+}
+
+@keyframes spinner{
+    100%{
+transform: rotate(360deg);
+    }
+
+}
+.color_switcher .them_color{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.color_switcher .them_color .theme_btn{
+    display: block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+
+}
